@@ -8,14 +8,16 @@ const Portfolio = ({ posts }) => {
       {posts.map(post => {
         const image = getImage(post.frontmatter.featuredImage)
         const title = post.frontmatter.title
-        console.log(post)
+        const link = post.frontmatter?.postLink
+
         return (
           <x.div>
-            <x.div width="300px">
+            <a href={link}>
+            <x.div width="400px">
               <GatsbyImage image={image} alt="" />
             </x.div>
             <x.h1>{title}</x.h1>
-            
+            </a>
           </x.div>
         )
       })}
