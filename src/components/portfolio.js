@@ -1,7 +1,7 @@
 import { x, styled } from '@xstyled/styled-components'
 import * as React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-
+import Tags from "./tags"
 
 const CardImage = styled.div`
   max-width: 330px;
@@ -22,7 +22,8 @@ const Portfolio = ({ posts }) => {
         const image = getImage(post.frontmatter.featuredImage)
         const title = post.frontmatter.title
         const link = post.frontmatter?.postLink
-
+        const tags = post.frontmatter.tags
+console.log(tags)
         return (
           <x.div
             p="10px"
@@ -35,8 +36,10 @@ const Portfolio = ({ posts }) => {
               <GatsbyImage image={image} alt="" />
             </CardImage>
             <x.div
-              p="0 20px"
+              p="0 30px"
+              w="70%"
             >
+              {tags.length && <Tags tags={tags} />}
               <x.h1>{title}</x.h1>
               <a href={link}>
                 <x.div
@@ -49,7 +52,7 @@ const Portfolio = ({ posts }) => {
                   fontFamily="sans-serif"
                   backgroundColor="#d043e0"
                 >
-                  {`visit ${title}`}
+                  Visit Site
                 </x.div>
               </a>
             </x.div>

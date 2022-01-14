@@ -38,6 +38,7 @@ export const pageQuery = graphql`
           title
           description
           postLink
+          tags
           featuredImage {
             childImageSharp {
               gatsbyImageData(width: 400)
