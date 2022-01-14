@@ -29,11 +29,11 @@ const Bio = () => {
     <x.div
       display="flex"
       justifyContent="space-between"
+      alignItems="flex-end"
     >
       {author?.name && (
         <div>
-          <p><strong>{author.name}</strong></p>
-          <p>{author?.summary || null}</p>
+          <p>{`Hi, I'm a frontend web developer working with React Gatsby Next`}</p>
           <a href="https://github.com/Mandaline">
             Github
           </a>

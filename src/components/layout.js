@@ -1,4 +1,5 @@
 import * as React from "react"
+import { x } from '@xstyled/styled-components'
 import { Link } from "gatsby"
 
 const Layout = ({ location, title, children }) => {
@@ -21,7 +22,12 @@ const Layout = ({ location, title, children }) => {
   }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
+    <x.div
+      margin="0 auto"
+      maxWidth="950px"
+      p="20px"
+      data-is-root-path={isRootPath}
+    >
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
@@ -29,7 +35,7 @@ const Layout = ({ location, title, children }) => {
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
       </footer>
-    </div>
+    </x.div>
   )
 }
 

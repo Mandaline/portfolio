@@ -1,23 +1,58 @@
-import { x } from '@xstyled/styled-components'
+import { x, styled } from '@xstyled/styled-components'
 import * as React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
+
+const CardImage = styled.div`
+  max-width: 330px;
+  .gatsby-image-wrapper {
+    height: 360px;
+    border-radius: 8px;
+  }
+`
 const Portfolio = ({ posts }) => {
   return (
-    <x.div display="flex">
+    <x.div
+      display="flex"
+      flexWrap="wrap" 
+      justifyContent="space-between"
+      gap="20px"
+    >
       {posts.map(post => {
         const image = getImage(post.frontmatter.featuredImage)
         const title = post.frontmatter.title
         const link = post.frontmatter?.postLink
 
         return (
-          <x.div>
-            <a href={link}>
-            <x.div width="400px">
+          <x.div
+            p="10px"
+            borderRadius="8px"
+            display="flex"
+            w="100%"
+            boxShadow="rgba(149, 157, 165, 0.2) 0px 8px 24px"
+          >
+            <CardImage>
               <GatsbyImage image={image} alt="" />
+            </CardImage>
+            <x.div
+              p="0 20px"
+            >
+              <x.h1>{title}</x.h1>
+              <a href={link}>
+                <x.div
+                  p="6px 18px"
+                  display="inline-block"
+                  borderRadius="6px"
+                  color="white"
+                  fontSize="12px"
+                  fontWeight="700"
+                  fontFamily="sans-serif"
+                  backgroundColor="#d043e0"
+                >
+                  {`visit ${title}`}
+                </x.div>
+              </a>
             </x.div>
-            <x.h1>{title}</x.h1>
-            </a>
           </x.div>
         )
       })}
