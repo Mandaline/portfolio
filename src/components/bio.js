@@ -31,7 +31,7 @@ const BioCard = styled.div`
   }
 `
 const Avatar = styled.div`
-  .bio-avatar {
+  img {
     border-radius: 100%;
   }
   margin-bottom: 20px;
@@ -112,6 +112,7 @@ const Bio = () => {
             height={110}
             quality={95}
             alt="Profile picture"
+            placeholder="none"
           />
         </a>
       </Avatar>
