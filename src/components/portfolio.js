@@ -4,9 +4,9 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Tags from "./tags"
 
 const CardImage = styled.div`
-  max-width: 330px;
+  max-width: 280px;
   .gatsby-image-wrapper {
-    height: 360px;
+    height: 320px;
     border-radius: 8px;
   }
 `
@@ -23,6 +23,7 @@ const Portfolio = ({ posts }) => {
         const title = post.frontmatter.title
         const link = post.frontmatter?.postLink
         const tags = post.frontmatter.tags
+        const about = post.frontmatter.about
 
         return (
           <x.div
@@ -42,9 +43,11 @@ const Portfolio = ({ posts }) => {
             >
               {tags.length && <Tags tags={tags} />}
               <x.h1>{title}</x.h1>
+              <x.p fontFamily="heading">{about}</x.p>
               <a href={link} target="_blank" rel="noreferrer noopener">
                 <x.div
                   p="5px 18px"
+                  mt="30px"
                   display="inline-block"
                   borderRadius="6px"
                   color="white"

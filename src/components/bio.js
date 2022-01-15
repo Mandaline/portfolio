@@ -66,13 +66,19 @@ const Bio = () => {
             alignItems="center"
             mb="12px"
           >
-            <x.h3 pb="3px" mb="0" mr="26px">Hi, I'm  Mandaline</x.h3>
+            <x.h3
+              pb="3px"
+              mb="0"
+              mr="26px"
+            >
+              Hi, I'm  Mandaline
+            </x.h3>
             <a href="https://github.com/Mandaline" target="_blank" rel="noreferrer noopener">
               <FaGithub />
             </a>
             
           </x.div>
-          <p>A web developer having fun with the <a href="https://jamstack.org/" target="_blank" rel="noreferrer noopener">JAMstack</a> and other frontend technologies</p>
+          <x.p maxWidth="480px" fontSize="18px">A web developer having fun with the <a href="https://jamstack.org/" target="_blank" rel="noreferrer noopener">JAMstack</a> and other frontend technologies</x.p>
           <x.div
             display="flex"
             mt="25px"

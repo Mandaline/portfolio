@@ -24,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 23px;
   }
   a {
-    color: #333;
+    color: bright;
     text-decoration: none;
   }
 `

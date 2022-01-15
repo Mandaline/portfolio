@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   return (
     <x.div
       margin="0 auto"
-      maxWidth="950px"
+      maxWidth="850px"
       p="20px"
     >
       <main>{children}</main>

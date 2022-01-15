@@ -8,5 +8,5 @@ tags:
   - Netlify CMS
   - SCSS
 postLink: https://www.spanishplaylist.com/
-about: A lyrics translation site with Netlify CMS publishing capabilities
+about: Lyrics translation site with Netlify CMS publishing capabilities
 ---

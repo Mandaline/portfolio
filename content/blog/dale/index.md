@@ -9,5 +9,5 @@ tags:
   - Forestry CMS
   - SCSS
 postLink: https://gracious-jepsen-1aa3c4.netlify.app
-about: A guidebook template with a clean design and intuitive navigation
+about: Guidebook template with a clean design and intuitive navigation
 ---
