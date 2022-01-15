@@ -7,6 +7,7 @@ const Tags = ({ tags }) => {
     <x.div
       display="flex"
       flexWrap="wrap"
+      justifyContent={{_: "center", sm: "left"}}
       mt="10px"
     >
       {tags.map((tag, index) => (
@@ -14,7 +15,8 @@ const Tags = ({ tags }) => {
           key={`${tag}-${index}`}
           fontSize="12px"
           fontWeight="700"
-          mr="17px"
+          mr={{_: "10px", sm: "17px"}}
+          ml={{_: "10px", sm: "0"}}
           textTransform="uppercase"
         >
           {tag}

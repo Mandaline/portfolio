@@ -1,6 +1,4 @@
-import { createGlobalStyle, th } from '@xstyled/styled-components'
-
-
+import { createGlobalStyle } from '@xstyled/styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   body {

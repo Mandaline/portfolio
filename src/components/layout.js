@@ -1,6 +1,5 @@
 import * as React from "react"
 import { x } from '@xstyled/styled-components'
-import { Link } from "gatsby"
 
 const Layout = ({ children }) => {
   return (
@@ -10,7 +9,7 @@ const Layout = ({ children }) => {
       p="20px"
     >
       <main>{children}</main>
-      <x.footer textAlign="center" mt="20px">
+      <x.footer textAlign="center" mt="30px">
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>

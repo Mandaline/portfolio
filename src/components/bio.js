@@ -27,7 +27,11 @@ const BioCard = styled.div`
 `
 const Avatar = styled.div`
   .bio-avatar {
-    border-radius: 100%100%;
+    border-radius: 100%;
+  }
+  margin-bottom: 20px;
+  @media (min-width: 640px) {
+    margin-bottom: 0;
   }
 `
 
@@ -36,64 +40,64 @@ const Bio = () => {
     query BioQuery {
       site {
         siteMetadata {
-          author {
-            name
-            summary
-          }
-          social {
-            twitter
-          }
+          git
         }
       }
     }
   `)
 
   // Set these values by editing "siteMetadata" in gatsby-config.js
-  const author = data.site.siteMetadata?.author
-  //const social = data.site.siteMetadata?.social
+  const git = data.site.siteMetadata.git
 
   return (
     <x.div
       display="flex"
+      flexDirection={{_: "column-reverse", sm: "row"}}
       justifyContent="space-between"
       alignItems="center"
+      textAlign={{_: "center", sm: "left"}}
       m="35px 0"
     >
-      {author?.name && (
-        <BioCard>
-          <x.div
-            display="flex"
-            alignItems="center"
-            mb="12px"
+      <BioCard>
+        <x.div
+          display="flex"
+          alignItems="center"
+          justifyContent={{_: "center", sm: "left"}}
+          mb="12px"
+        >
+          <x.h3
+            pb="3px"
+            mb="0"
+            mr="26px"
           >
-            <x.h3
-              pb="3px"
-              mb="0"
-              mr="26px"
-            >
-              Hi, I'm  Mandaline
-            </x.h3>
-            <a href="https://github.com/Mandaline" target="_blank" rel="noreferrer noopener">
-              <FaGithub />
-            </a>
-            
-          </x.div>
-          <x.p maxWidth="480px" fontSize="18px">A web developer having fun with the <a href="https://jamstack.org/" target="_blank" rel="noreferrer noopener">JAMstack</a> and other frontend technologies</x.p>
-          <x.div
-            display="flex"
-            mt="25px"
-            alignItems="center"
-          >
-            <SiReact />
-            <SiGatsby />
-            <SiNextdotjs />
-            <FaWordpress />
-            <SiStyledcomponents className="sc"/>
-          </x.div>
-        </BioCard>
-      )}
+            Hi, I'm  Mandaline
+          </x.h3>
+          <a href={git} target="_blank" rel="noreferrer noopener">
+            <FaGithub />
+          </a>
+          
+        </x.div>
+        <x.p
+          maxWidth="480px"
+          fontSize="18px"
+        >
+          A web developer having fun with the <a href="https://jamstack.org/" target="_blank" rel="noreferrer noopener">JAMstack</a> and other frontend technologies
+        </x.p>
+        <x.div
+          display="flex"
+          mt="25px"
+          alignItems="center"
+          justifyContent={{_: "center", sm: "left"}}
+        >
+          <SiReact />
+          <SiGatsby />
+          <SiNextdotjs />
+          <FaWordpress />
+          <SiStyledcomponents className="sc"/>
+        </x.div>
+      </BioCard>
       <Avatar>
-        <a href="https://github.com/Mandaline" target="_blank" rel="noreferrer noopener">
+        <a href={git} target="_blank" rel="noreferrer noopener">
           <StaticImage
             className="bio-avatar"
             layout="fixed"

@@ -4,10 +4,13 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Tags from "./tags"
 
 const CardImage = styled.div`
-  max-width: 280px;
+  max-width: 100%;
   .gatsby-image-wrapper {
     height: 320px;
     border-radius: 8px;
+  }
+  @media (min-width: 640px) {
+    max-width: 290px;
   }
 `
 const Portfolio = ({ posts }) => {
@@ -19,11 +22,8 @@ const Portfolio = ({ posts }) => {
       gap="20px"
     >
       {posts.map(post => {
+        const { title, link, tags, about } = post.frontmatter
         const image = getImage(post.frontmatter.featuredImage)
-        const title = post.frontmatter.title
-        const link = post.frontmatter?.postLink
-        const tags = post.frontmatter.tags
-        const about = post.frontmatter.about
 
         return (
           <x.div
@@ -31,6 +31,7 @@ const Portfolio = ({ posts }) => {
             p="10px"
             borderRadius="8px"
             display="flex"
+            flexDirection={{_: "column", sm: "row"}}
             w="100%"
             boxShadow="rgba(149, 157, 165, 0.2) 0px 8px 24px"
           >
@@ -38,22 +39,23 @@ const Portfolio = ({ posts }) => {
               <GatsbyImage image={image} alt="" />
             </CardImage>
             <x.div
-              p="0 30px"
-              w="70%"
+              p={{_: "0 20px 20px", sm: "0 30px"}}
+              w={{_: "100%", sm: "70%"}}
+              textAlign={{_: "center", sm: "left"}}
             >
               {tags.length && <Tags tags={tags} />}
               <x.h1>{title}</x.h1>
               <x.p fontFamily="heading">{about}</x.p>
               <a href={link} target="_blank" rel="noreferrer noopener">
                 <x.div
-                  p="5px 18px"
+                  p="6px 18px 4px"
                   mt="30px"
                   display="inline-block"
                   borderRadius="6px"
                   color="white"
                   fontSize="13px"
                   fontWeight="700"
-                  fontFamily="sans-serif"
+                  fontFamily="heading"
                   backgroundColor="#d043e0"
                   letterSpacing="1px"
                 >

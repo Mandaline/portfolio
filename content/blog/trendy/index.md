@@ -7,5 +7,5 @@ tags:
   - WordPress
   - WooCommerce
 postLink: https://www.trendy.com.uy/
-about: WordPress e-commerce site built using native Gutenberg blocks combined with custom CSS
+about: Lightweight WordPress e-commerce site built using native Gutenberg blocks combined with custom CSS
 ---

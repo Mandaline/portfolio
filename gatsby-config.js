@@ -7,9 +7,7 @@ module.exports = {
     },
     description: `Mandaline's personal web development portfolio`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
-    social: {
-      twitter: ``,
-    },
+    git: `https://github.com/Mandaline`
   },
   plugins: [
     `gatsby-plugin-image`,
