@@ -22,7 +22,7 @@ const Portfolio = ({ posts }) => {
       gap="20px"
     >
       {posts.map(post => {
-        const { title, link, tags, about } = post.frontmatter
+        const { title, postLink, tags, about } = post.frontmatter
         const image = getImage(post.frontmatter.featuredImage)
 
         return (
@@ -46,7 +46,7 @@ const Portfolio = ({ posts }) => {
               {tags.length && <Tags tags={tags} />}
               <x.h1>{title}</x.h1>
               <x.p fontFamily="heading">{about}</x.p>
-              <a href={link} target="_blank" rel="noreferrer noopener">
+              <a href={postLink} target="_blank" rel="noreferrer noopener">
                 <x.div
                   p="6px 18px 4px"
                   mt="30px"

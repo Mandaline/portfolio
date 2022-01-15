@@ -73,7 +73,7 @@ const Bio = () => {
           <x.h3
             pb="3px"
             mb="0"
-            mr="26px"
+            mr={{_:"10px", sm: "26px"}}
           >
             Hi, I'm  Mandaline
           </x.h3>
@@ -107,7 +107,7 @@ const Bio = () => {
             className="bio-avatar"
             layout="fixed"
             formats={["auto", "webp", "avif"]}
-            src="../images/profile-pic.jpeg"
+            src="../images/cat-avatar-sm.png"
             width={110}
             height={110}
             quality={95}
