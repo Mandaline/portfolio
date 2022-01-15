@@ -18,7 +18,12 @@ const BioCard = styled.div`
   svg {
     width: 26px;
     height: 26px;
-    margin-right: 26px;
+    margin-left: 13px;
+    margin-right: 13px;
+    @media (min-width: 640px) {
+      margin-left: 0;
+      margin-right: 26px;
+    }
     &.sc {
       width: 32px;
       height: 32px;

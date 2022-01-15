@@ -40,7 +40,7 @@ const Portfolio = ({ posts }) => {
             </CardImage>
             <x.div
               p={{_: "0 20px 20px", sm: "0 30px"}}
-              w={{_: "100%", sm: "70%"}}
+              w={{_: "100%", md: "70%"}}
               textAlign={{_: "center", sm: "left"}}
             >
               {tags.length && <Tags tags={tags} />}
