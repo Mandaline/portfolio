@@ -41,7 +41,7 @@ console.log(tags)
             >
               {tags.length && <Tags tags={tags} />}
               <x.h1>{title}</x.h1>
-              <a href={link}>
+              <a href={link} target="_blank" rel="noreferrer noopener">
                 <x.div
                   p="6px 18px"
                   display="inline-block"

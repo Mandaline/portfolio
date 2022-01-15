@@ -10,7 +10,8 @@ import {
 import {
   SiReact, 
   SiNextdotjs,
-  SiGatsby
+  SiGatsby,
+  SiStyledcomponents
 } from "react-icons/si";
 
 const BioCard = styled.div`
@@ -56,12 +57,12 @@ const Bio = () => {
             alignItems="center"
           >
             <x.h3 pb="3px" mr="26px">Hi, I'm  Mandaline</x.h3>
-            <a href="https://github.com/Mandaline">
+            <a href="https://github.com/Mandaline" target="_blank" rel="noreferrer noopener">
               <FaGithub />
             </a>
             
           </x.div>
-          <p>A web developer having fun with the <a href="https://jamstack.org/">JAMstack</a> and other frontend technologies</p>
+          <p>A web developer having fun with the <a href="https://jamstack.org/" target="_blank" rel="noreferrer noopener">JAMstack</a> and other frontend technologies</p>
           <x.div
             display="flex"
           >
@@ -69,10 +70,11 @@ const Bio = () => {
             <SiGatsby />
             <SiNextdotjs />
             <FaWordpress />
+            <SiStyledcomponents />
           </x.div>
         </BioCard>
       )}
-      <a href="https://github.com/Mandaline">
+      <a href="https://github.com/Mandaline" target="_blank" rel="noreferrer noopener">
         <StaticImage
           className="bio-avatar"
           layout="fixed"

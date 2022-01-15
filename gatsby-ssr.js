@@ -1,20 +1,21 @@
 import React from 'react'
 import {
-  defaultTheme,
   ThemeProvider,
   Preflight,
 } from '@xstyled/styled-components'
+import { GlobalStyle } from './src/theme/global-styles'
 
 const theme = {
-  ...defaultTheme,
+  
   // Customize your theme here
 }
 
 // Wraps every page in a component
-export const wrapPageElement = ({ element }) => {
+export const wrapRootElement = ({ element }) => {
   return (
     <ThemeProvider theme={theme}>
       <Preflight />
+      <GlobalStyle />
       {element}
     </ThemeProvider>
   )

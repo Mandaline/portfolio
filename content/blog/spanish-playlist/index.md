@@ -5,5 +5,6 @@ featuredImage: la-trenza-monlaferte.jpg
 tags:
   - Gatsby
   - Netlify CMS
+  - SCSS
 postLink: https://www.spanishplaylist.com/
 ---
