@@ -43,14 +43,15 @@ console.log(tags)
               <x.h1>{title}</x.h1>
               <a href={link} target="_blank" rel="noreferrer noopener">
                 <x.div
-                  p="6px 18px"
+                  p="5px 18px"
                   display="inline-block"
                   borderRadius="6px"
                   color="white"
-                  fontSize="12px"
+                  fontSize="13px"
                   fontWeight="700"
                   fontFamily="sans-serif"
                   backgroundColor="#d043e0"
+                  letterSpacing="1px"
                 >
                   Visit Site
                 </x.div>

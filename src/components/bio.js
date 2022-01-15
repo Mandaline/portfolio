@@ -19,6 +19,15 @@ const BioCard = styled.div`
     width: 26px;
     height: 26px;
     margin-right: 26px;
+    &.sc {
+      width: 32px;
+      height: 32px;
+    }
+  }
+`
+const Avatar = styled.div`
+  .bio-avatar {
+    border-radius: 100%100%;
   }
 `
 
@@ -47,7 +56,7 @@ const Bio = () => {
     <x.div
       display="flex"
       justifyContent="space-between"
-      alignItems="flex-end"
+      alignItems="center"
       m="35px 0"
     >
       {author?.name && (
@@ -55,8 +64,9 @@ const Bio = () => {
           <x.div
             display="flex"
             alignItems="center"
+            mb="12px"
           >
-            <x.h3 pb="3px" mr="26px">Hi, I'm  Mandaline</x.h3>
+            <x.h3 pb="3px" mb="0" mr="26px">Hi, I'm  Mandaline</x.h3>
             <a href="https://github.com/Mandaline" target="_blank" rel="noreferrer noopener">
               <FaGithub />
             </a>
@@ -65,27 +75,31 @@ const Bio = () => {
           <p>A web developer having fun with the <a href="https://jamstack.org/" target="_blank" rel="noreferrer noopener">JAMstack</a> and other frontend technologies</p>
           <x.div
             display="flex"
+            mt="25px"
+            alignItems="center"
           >
             <SiReact />
             <SiGatsby />
             <SiNextdotjs />
             <FaWordpress />
-            <SiStyledcomponents />
+            <SiStyledcomponents className="sc"/>
           </x.div>
         </BioCard>
       )}
-      <a href="https://github.com/Mandaline" target="_blank" rel="noreferrer noopener">
-        <StaticImage
-          className="bio-avatar"
-          layout="fixed"
-          formats={["auto", "webp", "avif"]}
-          src="../images/profile-pic.jpeg"
-          width={110}
-          height={110}
-          quality={95}
-          alt="Profile picture"
-        />
-      </a>
+      <Avatar>
+        <a href="https://github.com/Mandaline" target="_blank" rel="noreferrer noopener">
+          <StaticImage
+            className="bio-avatar"
+            layout="fixed"
+            formats={["auto", "webp", "avif"]}
+            src="../images/profile-pic.jpeg"
+            width={110}
+            height={110}
+            quality={95}
+            alt="Profile picture"
+          />
+        </a>
+      </Avatar>
     </x.div>
   )
 }

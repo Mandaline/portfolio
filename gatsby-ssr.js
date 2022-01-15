@@ -4,11 +4,7 @@ import {
   Preflight,
 } from '@xstyled/styled-components'
 import { GlobalStyle } from './src/theme/global-styles'
-
-const theme = {
-  
-  // Customize your theme here
-}
+import { theme } from './src/theme/theme'
 
 // Wraps every page in a component
 export const wrapRootElement = ({ element }) => {

@@ -1,17 +1,13 @@
 import React from 'react'
 // custom typefaces
-import "typeface-montserrat"
-import "typeface-merriweather"
+import "@fontsource/amiko"
+import "@fontsource/fira-code"
 import {
   ThemeProvider,
   Preflight,
 } from '@xstyled/styled-components'
 import { GlobalStyle } from './src/theme/global-styles'
-
-const theme = {
-  
-  // Customize your theme here
-}
+import { theme } from './src/theme/theme'
 
 // Wraps every page in a component
 export const wrapRootElement = ({ element }) => {
