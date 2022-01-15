@@ -12,7 +12,7 @@ const BlogIndex = ({ data, location }) => {
   
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
+      <Seo title="All Projects" />
       <Bio />
       <Portfolio posts={orderedPosts} />
     </Layout>

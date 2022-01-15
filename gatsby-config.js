@@ -5,7 +5,7 @@ module.exports = {
       name: `Mandaline`,
       summary: `frontend web developer`,
     },
-    description: `Mandaline's personal web development portfolio`,
+    description: `Mandaline's web development portfolio`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     git: `https://github.com/Mandaline`
   },
