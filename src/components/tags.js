@@ -9,8 +9,9 @@ const Tags = ({ tags }) => {
       flexWrap="wrap"
       mt="10px"
     >
-      {tags.map(tag => (
+      {tags.map((tag, index) => (
         <x.span
+          key={`${tag}-${index}`}
           fontSize="12px"
           fontWeight="700"
           mr="17px"

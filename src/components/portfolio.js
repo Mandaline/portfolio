@@ -23,9 +23,10 @@ const Portfolio = ({ posts }) => {
         const title = post.frontmatter.title
         const link = post.frontmatter?.postLink
         const tags = post.frontmatter.tags
-console.log(tags)
+
         return (
           <x.div
+            key={title}
             p="10px"
             borderRadius="8px"
             display="flex"

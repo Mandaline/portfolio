@@ -8,12 +8,13 @@ import Seo from "../components/seo"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
-
+  const orderedPosts = posts.sort((a, b) => a.frontmatter.postOrder - b.frontmatter.postOrder)
+  
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
       <Bio />
-      <Portfolio posts={posts} />
+      <Portfolio posts={orderedPosts} />
     </Layout>
   )
 }
@@ -36,6 +37,8 @@ export const pageQuery = graphql`
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title
+          postOrder
+          about
           description
           postLink
           tags
