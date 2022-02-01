@@ -1,6 +1,6 @@
 ---
 title: Spanish Playlist
-postOrder: 1
+postOrder: 0
 description: "Spanish language songs with translations and notes"
 featuredImage: la-trenza-monlaferte.jpg
 tags:

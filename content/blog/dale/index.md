@@ -1,6 +1,6 @@
 ---
 title: Dale Uruguay
-postOrder: 0
+postOrder: 1
 description: "Guide book to Uruguay"
 featuredImage: colonia-flower-door.jpg
 tags:
